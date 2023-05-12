@@ -1,0 +1,276 @@
+@use '../vars' as vars;
+
+.categories {
+  &__container {
+    margin-bottom: 78px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 16px;
+    // grid-auto-flow: column;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  &__card {
+    height: 64.375vw;
+    max-height: 274px;
+  }
+
+  &__big-card {
+    grid-column-end: span 2;
+  }
+}
+
+.category-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  border-radius: 10px;
+  padding: 16px;
+  padding-top: 10px;
+  background-color: vars.$color-gray-light;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: right bottom 16px;
+
+  &__subcategories {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    width: 100%;
+    margin-bottom: 9px;
+  }
+
+  &__subcategory-item {
+    height: fit-content;
+  }
+
+  &_sofas {
+    height: 103.750vw;
+    max-height: 450px;
+    background-image: url('../img/categories/sofas.webp');
+  }
+
+  &_beds {
+    background-image: url('../img/categories/beds.webp');
+  }
+
+  &_armchairs {
+    background-image: url('../img/categories/armchairs.webp');
+  }
+
+  &_dressers {
+    background-image: url('../img/categories/dressers.webp');
+  }
+
+  &_chairs {
+    background-image: url('../img/categories/chairs.webp');
+  }
+
+  &__subcategories {
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+
+  &__subcategory-item {
+    margin-bottom: -5px;
+  }
+
+  &__subcategory {
+    font-size: 10px;
+    line-height: 100%;
+  }
+
+  &__title {
+    width: auto;
+    max-width: 76px;
+    margin-right: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 104%;
+  }
+
+  &__link {
+    align-self: flex-end;
+    font-size: 0;
+  }
+
+  &_big {
+    padding: 30px;
+    padding-top: 26px;
+  }
+
+  &_big &__subcategories {
+    flex-direction: row;
+    margin-bottom: 13px;
+  }
+
+  &_big &__subcategory-item {
+    margin-bottom: 0;
+  }
+
+  &_big &__subcategory {
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  &_big &__title {
+    max-width: none;
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  &_big &__link {
+    transform: translateY(-3px);
+  }
+}
+
+@media (min-width: 576px) {
+  .categories {
+    &__container {
+      margin-bottom: 70px;
+    }
+
+    &__grid {
+      gap: 32px;
+      max-width: none;
+    }
+
+    &__card {
+      position: relative;
+      height: 511px;
+      max-height: none;
+    }
+  }
+
+  .category-card {
+    padding: 30px;
+    padding-top: 26px;
+    background-position: left bottom 88px;
+
+    &__subcategories {
+      flex-direction: row;
+      gap: 10px 30px;
+      margin-bottom: 18px;
+    }
+
+    &__subcategory {
+      font-size: 14px;
+      line-height: 100%;
+    }
+
+    &__title {
+      max-width: none;
+      font-size: 24px;
+      line-height: 33px;
+    }
+
+    &_big {
+      background-position: left bottom 82px;
+    }
+
+    &_sofas {
+      background-image: url('../img/categories/sofas-768.webp');
+      background-size: 515px 308px;
+      max-height: none;
+    }
+
+    &_beds {
+      background-image: url('../img/categories/beds-768.webp');
+      background-size: 448px 296px;
+    }
+
+    &_armchairs {
+      background-image: url('../img/categories/armchairs-768.webp');
+      background-size: 497px 296px;
+      background-position: right 36px bottom 88px;
+    }
+
+    &_dressers {
+      background-image: url('../img/categories/dressers-768.webp');
+      background-size: 252px 296px;
+    }
+
+    &_chairs {
+      background-image: url('../img/categories/chairs-768.webp');
+      background-size: 378px 296px;
+      background-position: right 32px bottom 88px;
+    }
+
+    &__link {
+      position: absolute;
+      bottom: 26px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .categories {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .category-card {
+    &_sofas {
+      order: -1;
+    }
+
+    &_beds {
+      order: -1;
+    }
+
+    &_dressers {
+      order: -1;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .categories {
+    &__grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__card {
+      grid-column-end: span 2;
+      height: 405px;
+    }
+
+    &__big-card-1920 {
+      grid-column-end: span 3;
+      order: -2;
+      height: 511px;
+    }
+  }
+
+  .category-card {
+    background-position: left bottom 82px;
+
+    &_armchairs {
+      background-image: url('../img/categories/armchairs-1920.webp');
+      background-size: 515px 308px;
+    }
+
+    &_beds {
+      background-image: url('../img/categories/beds-1920.webp');
+      background-size: 306px 202px;
+    }
+
+    &_dressers {
+      background-image: url('../img/categories/dressers-1920.webp');
+      background-size: 330px 202px;
+    }
+
+    &_chairs {
+      background-image: url('../img/categories/chairs-1920.webp');
+      background-size: 258px 202px;
+    }
+  }
+}

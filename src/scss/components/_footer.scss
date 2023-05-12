@@ -1,0 +1,151 @@
+@use '../vars' as vars;
+
+.footer {
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 22px;
+    margin-bottom: 0;
+    background-color: vars.$color-gray-middle;
+  }
+
+  &__logo {
+    margin-bottom: 20px;
+  }
+
+  &__links {
+    max-width: 200px;
+    margin-bottom: 27px;
+  }
+
+  &__menu {
+    width: 296px;
+  }
+
+  &__copyright {
+    text-align: center;
+    padding: 5px 10px;
+    margin-bottom: 0;
+    color: vars.$color-gray;
+    font-size: 14px;
+    line-height: 19px;
+    background-color: vars.$color-gray-light;
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px 16px;
+
+  &__title {
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .footer {
+    &__main {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__logo {
+      margin-right: 15px;
+    }
+
+    &__links {
+      max-width: none;
+    }
+
+    &__menu {
+      width: 100%;
+    }
+  }
+
+  .footer-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    column-gap: 10px;
+
+    &__submenu {
+      padding-right: 2px;
+
+      &:nth-child(2) {
+        // width: 153px;
+        padding-right: 20px;
+      }
+
+      &:nth-child(3) {
+        // width: 142px;
+        padding-right: 38px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .footer {
+    background-color: vars.$color-gray-middle;
+
+    &__main {
+      display: grid;
+      grid-template-columns: 187px 1fr;
+      grid-auto-flow: column;
+      column-gap: 32px;
+      row-gap: 26px;
+      padding-top: 27px;
+      padding-bottom: 24px;
+    }
+
+    &__logo {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    &__links {
+      margin-bottom: 0;
+    }
+
+    &__menu {
+      grid-row-end: span 2;
+    }
+
+    &__copyright {
+      max-width: none;
+    }
+  }
+
+  .contacts {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer {
+    &__main {
+      column-gap: 250px;
+      padding-top: 29px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  <head>
+    <script type="module" src="./js/indexOverflow.js"></script>
+    @include('partials/_head.html')
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script defer src="./js/hero.js"></script>
+    <script defer src="./js/special.js"></script>
+    <script defer src="./js/topCatalog.js"></script>
+    <script defer src="./js/articles.js"></script>
+    <script defer src="./js/callBack.js"></script>
+  </head>
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/_header.html')
+      <main class="main">
+        @include('partials/_index.html')
+      </main>
+      @include('partials/_footer.html')
+    </div>
+  </body>
+
+</html>

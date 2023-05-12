@@ -1,0 +1,95 @@
+@use '../vars' as vars;
+
+.callback {
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    color: vars.$color-gray-shade;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &__input-wrapper {
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 54px;
+  }
+
+  &__submit {
+    padding: 17px 31px;
+    margin-bottom: 13px;
+  }
+
+  &__license-wrapper {
+    position: relative;
+  }
+
+  &__license {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    // user-select: none;
+  }
+
+  &__checkbox {
+    margin-right: 3px;
+  }
+}
+
+@media (min-width: 576px) {
+  .callback {
+    &__container {
+      padding-right: min(calc(24.349vw + 104px), 291px);
+      background-image: url('../img/callback/callback-background-768.webp');
+      background-size: min(24.349vw, 187px) min(57.813vw, 444px);
+      background-repeat: no-repeat;
+      background-position: right 72px center;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__submit {
+      margin-bottom: 11px;
+    }
+
+    &__license {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__checkbox {
+      margin-right: 4px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .callback {
+    &__container {
+      padding-right: 566px;
+      background-image: url('../img/callback/callback-background-1024.webp');
+      background-size: 514px 316px;
+      background-position: right 20px center;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .callback {
+    &__container {
+      padding-right: 656px;
+      margin-bottom: 67px;
+      background-image: url('../img/callback/callback-background-1920.webp');
+      background-size: 624px 383px;
+      background-position: right center;
+    }
+  }
+}

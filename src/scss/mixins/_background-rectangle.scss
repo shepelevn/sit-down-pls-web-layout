@@ -1,0 +1,12 @@
+@mixin background-rectangle($vertical-offset, $horizontal-offset) {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -1 * $horizontal-offset;
+  top: -1 * $vertical-offset;
+  width: calc(100% +  $horizontal-offset * 2);
+  height: calc(100% + $vertical-offset * 2);
+  opacity: 0;
+  z-index: 100;
+  font-size: 0;
+}

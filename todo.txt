@@ -1,0 +1,23 @@
+- Check cross-browser compatablity
+
+ Desktop
+  Chrome - v
+  Firefox - v
+  Edge - v
+  Opera - v
+  Safari - v
+
+ Mobile
+  Chrome - v
+  Firefox - v
+  Edge - v
+  Opera - v
+
+ - Layout
+ - Functionality
+ - Keyboard accessibility
+ - Animations
+
+- Check firefox for pixel perfect layout one more time
+  (stopped at suppliers.html)
+- Delete all later blocks

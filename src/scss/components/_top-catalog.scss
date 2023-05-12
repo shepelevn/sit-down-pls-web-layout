@@ -1,0 +1,23 @@
+.top-catalog {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    align-self: flex-start;
+  }
+
+  &__list {
+    margin-bottom: 32px;
+  }
+
+  &__more {
+    padding: 20px 34px;
+
+    &_hidden {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@use '../vars' as vars;
+
+.item-swiper {
+  &__wrapper {
+    aspect-ratio: 296 / 116;
+    margin-bottom: 16px;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    max-height: 100%;
+  }
+
+  &__image {
+    // max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.item-pagination {
+  position: static;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 19px;
+    height: 81px;
+    background-color: vars.$color-gray-light;
+  }
+
+  &__bullet {
+    flex: 1 0 auto;
+    padding: 10px;
+    cursor: pointer;
+
+    &:first-child {
+      display: none;
+    }
+
+    // &_active {
+      // display: none;
+    // }
+  }
+
+  &__image {
+    height: 61px;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 576px) {
+  .item-pagination {
+    overflow-y: initial;
+
+    &__wrapper {
+      flex-direction: column;
+      gap: 18px;
+      height: auto;
+      padding: 25px;
+      margin-right: 32px;
+    }
+
+    &__bullet {
+      padding: 0;
+      height: 61px;
+    }
+  }
+
+  .item-swiper {
+    &__image {
+      height: 33.984vw;
+      max-height: 300px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .item-pagination {
+    overflow-y: scroll;
+
+    &__wrapper {
+      flex-direction: row;
+      gap: 39px;
+      padding: 10px;
+    }
+  }
+
+  .item-swiper {
+    &__image {
+      height: 218px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .item-pagination {
+    &__wrapper {
+      padding: 10px 25px;
+    }
+  }
+
+  .item-swiper {
+    &__image {
+      height: 261px;
+    }
+  }
+}
