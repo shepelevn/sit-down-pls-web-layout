@@ -2,6 +2,7 @@
 
 .form-modal {
   &__title {
+    margin: 0;
     margin-bottom: 8px;
     font-weight: 400;
     font-size: 24px;
@@ -59,6 +60,7 @@
 
   &__text {
     width: 194px;
+    margin: 0;
     color: vars.$color-black;
     font-weight: 400;
     // font-size: 16px;

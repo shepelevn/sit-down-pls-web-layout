@@ -44,14 +44,16 @@
     flex: 1 0 auto;
     padding: 10px;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(vars.$color-primary, 0.5);
 
     &:first-child {
       display: none;
     }
 
-    // &_active {
-      // display: none;
-    // }
+    &:focus-visible {
+      outline: 1px solid vars.$color-primary;
+      outline-offset: -1px;
+    }
   }
 
   &__image {

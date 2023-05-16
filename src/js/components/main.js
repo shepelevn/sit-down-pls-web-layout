@@ -116,14 +116,17 @@ import noUiSlider from '../vendor/nouislider.min';
       const contentDiv = transformerDropdown.querySelector('.common-dropdown__content');
       const button = transformerDropdown.querySelector('.common-dropdown__button');
 
+      const breakpoint = transformerDropdown.dataset.breakpoint;
+
       const title = htmlToDom(`
-      <h3 class="common-dropdown__title">
+      <h3 class="common-dropdown__title common-dropdown__title_breakpoint_${breakpoint}">
         ${button.textContent}
         </h3>
       `);
 
       const contentCloneDiv = contentDiv.cloneNode(true);
       contentCloneDiv.classList.add('common-dropdown__content_static');
+      contentCloneDiv.classList.add('common-dropdown__content_breakpoint_1400_static');
 
       contentDiv.classList.add('common-dropdown__content_dynamic');
 
@@ -210,6 +213,9 @@ import noUiSlider from '../vendor/nouislider.min';
     const regionChoices = initSelect(regionSelect, 'select-region', {callbackOnInit: regionSelectChangeHandler}, regionSelectChangeHandler);
 
     regionChoices.setChoiceByValue('moscow');
+
+    const categorySelect = document.getElementById('header-category');
+    initSelect(categorySelect, 'select-category');
   }
 
   function getRegionSelectWidth() {
@@ -256,13 +262,11 @@ import noUiSlider from '../vendor/nouislider.min';
     });
 
     choices.passedElement.element.addEventListener('change', changeHandler);
-    // const selectSingleDiv = select.parentElement.querySelector('.select-primary__single');
     const selectSingleDiv = select.parentElement.parentElement;
     selectSingleDiv.setAttribute('aria-label', select.dataset.label);
 
     if (select.dataset.noFlip) {
       choices.containerOuter.element.classList.add(`no-flip`);
-      // console.log(choices.containerOuter);
     }
 
     return choices;

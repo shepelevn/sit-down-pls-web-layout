@@ -15,6 +15,7 @@
   }
 
   &__title {
+    margin: 0;
     font-family: vars.$font-playfair-display;
     color: vars.$color-gold;
     font-weight: 900;
@@ -24,6 +25,7 @@
 
   &__description {
     max-width: 58.438vw;
+    margin: 0;
     color: white;
     width: 700px;
     font-size: 5vw;

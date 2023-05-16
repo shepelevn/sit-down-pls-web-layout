@@ -18,7 +18,10 @@
   }
 
   &__list {
+    padding-left: 0;
+    margin: 0;
     margin-bottom: 32px;
+    list-style: none;
   }
 
   &__banner {
@@ -28,6 +31,7 @@
 
 .filters {
   &__title {
+    margin: 0;
     margin-bottom: 16px;
     font-weight: 400;
     font-size: 14px;
@@ -45,6 +49,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     max-width: 406px;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
   }
 }
 
@@ -54,6 +61,7 @@
     font-size: 16px;
     line-height: 130%;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(vars.$color-primary, 0.5);
 
     &_hidden {
       display: none;
@@ -71,9 +79,12 @@
     align-items: center;
   }
 
+  &__label-text {
+    margin-right: 6px;
+  }
+
   &__input {
     width: 82px;
-    margin-left: 6px;
   }
 
   &__slider {
@@ -236,7 +247,7 @@
       display: none;
     }
 
-    & &__prices {
+    &__prices {
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;

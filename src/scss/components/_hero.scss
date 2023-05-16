@@ -47,6 +47,7 @@
   &__text {
     // width: 204px;
     width: 63.750vw;
+    margin: 0;
     font-weight: 700;
     // font-size: 20px;
     line-height: 27px;
@@ -66,11 +67,17 @@
     color: white;
   }
 
-  & .swiper-pagination-bullet {
+  &__bullet {
     background-color: vars.$color-black;
     width: 6px;
     height: 6px;
     transition: opacity vars.$transition-duration vars.$transition-timing;
+
+    &_active {
+      &:hover {
+        opacity: 1;
+      }
+    }
 
     &:hover {
       opacity: 0.7;
@@ -78,12 +85,6 @@
 
     &:focus-visible {
       outline: 1px solid vars.$color-primary;
-    }
-  }
-
-  & .swiper-pagination-bullet-active {
-    &:hover {
-      opacity: 1;
     }
   }
 }
@@ -134,7 +135,7 @@
       width: 76.172vw;
     }
 
-    & .swiper-pagination-bullet {
+    &__bullet {
       width: 14px;
       height: 14px;
     }

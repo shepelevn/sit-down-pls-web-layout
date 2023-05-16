@@ -11,7 +11,9 @@
     gap: 32px 16px;
     // grid-auto-flow: column;
     max-width: 450px;
+    padding-left: 0;
     margin: 0 auto;
+    list-style: none;
   }
 
   &__card {
@@ -41,7 +43,9 @@
     flex-wrap: wrap;
     column-gap: 20px;
     width: 100%;
+    padding-left: 0;
     margin-bottom: 9px;
+    list-style: none;
   }
 
   &__subcategory-item {
@@ -87,6 +91,7 @@
   &__title {
     width: auto;
     max-width: 76px;
+    margin: 0;
     margin-right: 5px;
     font-weight: 400;
     font-size: 16px;
@@ -96,6 +101,7 @@
   &__link {
     align-self: flex-end;
     font-size: 0;
+    transform: translateY(-3px);
   }
 
   &_big {
@@ -103,27 +109,27 @@
     padding-top: 26px;
   }
 
-  &_big &__subcategories {
+  &__subcategories_big {
     flex-direction: row;
     margin-bottom: 13px;
   }
 
-  &_big &__subcategory-item {
+  &__subcategory-item_big {
     margin-bottom: 0;
   }
 
-  &_big &__subcategory {
+  &__subcategory_big {
     font-size: 14px;
     line-height: 100%;
   }
 
-  &_big &__title {
+  &__title_big {
     max-width: none;
     font-size: 24px;
     line-height: 33px;
   }
 
-  &_big &__link {
+  &__link_big {
     transform: translateY(-3px);
   }
 }
@@ -155,6 +161,10 @@
       flex-direction: row;
       gap: 10px 30px;
       margin-bottom: 18px;
+    }
+
+    &__subcategories_big {
+      margin-bottom: 13px;
     }
 
     &__subcategory {

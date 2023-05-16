@@ -17,11 +17,17 @@
 
   &__links {
     max-width: 200px;
+    padding-left: 0;
+    margin: 0;
     margin-bottom: 27px;
+    list-style: none;
   }
 
   &__menu {
     width: 296px;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
   }
 
   &__copyright {
@@ -48,10 +54,16 @@
   gap: 26px 16px;
 
   &__title {
+    margin: 0;
     margin-bottom: 3px;
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
+  }
+
+  &__list {
+    padding-left: 0;
+    list-style: none;
   }
 
   &__item {

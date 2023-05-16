@@ -6,6 +6,7 @@
   }
 
   &__text {
+    margin: 0;
     margin-bottom: 16px;
     color: vars.$color-gray-shade;
     font-size: 14px;
@@ -24,6 +25,7 @@
   &__submit {
     padding: 17px 31px;
     margin-bottom: 13px;
+    cursor: pointer;
   }
 
   &__license-wrapper {

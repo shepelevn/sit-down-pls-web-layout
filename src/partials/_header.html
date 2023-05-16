@@ -65,7 +65,7 @@
       <img src="img/header/logo.webp" alt="Логотип SitDownPls">
     </a>
     <div class="header__menu header__burger-menu menu common-transition">
-      <button class="menu__close close transparent-button" id="close-burger" aria-label="Закрыть меню">
+      <button class="menu__close close transparent-button common-link" id="close-burger" aria-label="Закрыть меню">
         <span class="common-link__content">
           <svg class="close__icon transparent-button__icon">
             <use xlink:href="img/sprite.svg#close"></use>
@@ -120,14 +120,14 @@
       </nav>
     </div>
     <div class="header__service-buttons">
-      <button class="header__account transparent-button" aria-label="Личный кабинет">
+      <button class="header__account transparent-button common-link" aria-label="Личный кабинет">
         <span class="common-link__content">
           <svg class="header__account-icon transparent-button__icon">
             <use xlink:href="img/sprite.svg#user"></use>
           </svg>
         </span>
       </button>
-      <button class="header__cart cart transparent-button" aria-label="Корзина">
+      <button class="header__cart cart transparent-button common-link" aria-label="Корзина">
         <span class="common-link__content">
           <span class="cart__count">0</span>
           <svg class="cart__icon transparent-button__icon">
@@ -148,7 +148,7 @@
         </button>
       </div>
 
-      <select class="select-primary" id="header-category" name="category" data-label="Категория" data-no-flip="true">
+      <select class="select-category" id="header-category" name="category" data-label="Категория" data-no-flip="true">
         <option class="select-primary__option" value="">Категория</option>
         <option value="select-primary__option">Диваны</option>
         <option value="select-primary__option">Кресла</option>

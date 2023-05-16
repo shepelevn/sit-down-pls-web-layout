@@ -7,6 +7,10 @@
 
   &__pagination {
     margin-bottom: 16px;
+
+    &:focus-visible {
+      outline: 2px solid vars.$color-primary;
+    }
   }
 
   &__main {
@@ -27,6 +31,7 @@
   }
 
   &__title {
+    margin: 0;
     margin-bottom: 8px;
     font-weight: 400;
     // font-size: 16px;
@@ -37,6 +42,7 @@
   &__description {
     // max-width: 244px;
     max-width: 76.250vw;
+    margin: 0;
     margin-bottom: 16px;
     color: vars.$color-gray;
     // font-size: 14px;
@@ -45,6 +51,7 @@
   }
 
   &__price {
+    margin: 0;
     margin-bottom: 16px;
     // font-size: 24px;
     font-size: calc(12px + 3.750vw);
@@ -58,6 +65,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
+    cursor: pointer;
   }
 
   &__add-button {
@@ -68,6 +76,7 @@
 
 .design {
   &__title {
+    margin: 0;
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 16px;
@@ -79,9 +88,14 @@
   }
 
   &__paragraph {
+    margin: 0;
     margin-bottom: 6px;
     font-size: 14px;
     line-height: 180%;
+  }
+
+  &__picture {
+    font-size: 0;
   }
 
   &__images {
@@ -231,6 +245,10 @@
   .design {
     &__description {
       margin-bottom: 106px;
+    }
+
+    &__images {
+      max-width: 529px;
     }
   }
 }

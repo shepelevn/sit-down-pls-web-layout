@@ -18,6 +18,7 @@
  - Keyboard accessibility
  - Animations
 
-- Check firefox for pixel perfect layout one more time
-  (stopped at suppliers.html)
+- Check layout on firefox, chrome
 - Delete all later blocks
+
+> Stopped at checking firefox on breakpoint 768

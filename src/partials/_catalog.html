@@ -6,9 +6,9 @@
       <ul class="filters__list">
 
         <li class="filters__item">
-          <div class="filters__dropdown filter-dropdown common-dropdown common-dropdown_transformer common-dropdown_breakpoint_1400">
-            <button class="common-dropdown__button">Категория</button>
-            <div class="common-dropdown__content filter-dropdown__content">
+          <div class="filters__dropdown filter-dropdown common-dropdown common-dropdown_transformer common-dropdown_breakpoint_1400" data-breakpoint="1400">
+            <button class="common-dropdown__button common-dropdown__button_breakpoint_1400">Категория</button>
+            <div class="common-dropdown__content common-dropdown__content_breakpoint_1400 filter-dropdown__content">
               <label class="filter-dropdown__label">
                 <input class="filter-dropdown__checkbox checkbox-primary" type="checkbox">
                 Диваны
@@ -63,15 +63,19 @@
         </li>
 
         <li class="filters__item">
-          <div class="filters__dropdown filter-dropdown common-dropdown common-dropdown_transformer common-dropdown_breakpoint_1400">
-            <button class="common-dropdown__button">Цена</button>
-            <div class="common-dropdown__content filter-dropdown__content filter-dropdown__prices">
+          <div class="filters__dropdown filter-dropdown common-dropdown common-dropdown_transformer common-dropdown_breakpoint_1400" data-breakpoint="1400">
+            <button class="common-dropdown__button common-dropdown__button_breakpoint_1400">Цена</button>
+            <div class="common-dropdown__content common-dropdown__content_breakpoint_1400 filter-dropdown__content filter-dropdown__prices">
               <label class="filter-dropdown__label filter-dropdown__price-label">
-                от
+                <span class="filter-dropdown__label-text">
+                  от
+                </span>
                 <input class="filter-dropdown__input small-input" id="price-min" type="text">
               </label>
               <label class="filter-dropdown__label filter-dropdown__price-label">
-                до
+                <span class="filter-dropdown__label-text">
+                  до
+                </span>
                 <input class="filter-dropdown__input small-input" id="price-max" type="text">
               </label>
               <div class="filter-dropdown__slider common-slider" id="price-slider" data-min-input-id="price-min" data-max-input-id="price-max"></div>
@@ -80,9 +84,9 @@
         </li>
 
         <li class="filters__item">
-          <div class="filters__dropdown filter-dropdown common-dropdown common-dropdown_transformer common-dropdown_breakpoint_1400">
-            <button class="common-dropdown__button">Скидка</button>
-            <div class="common-dropdown__content filter-dropdown__content">
+          <div class="filters__dropdown filter-dropdown common-dropdown common-dropdown_transformer common-dropdown_breakpoint_1400" data-breakpoint="1400">
+            <button class="common-dropdown__button common-dropdown__button_breakpoint_1400">Скидка</button>
+            <div class="common-dropdown__content common-dropdown__content_breakpoint_1400 filter-dropdown__content">
               <label class="filter-dropdown__label">
                 <input class="filter-dropdown__checkbox checkbox-primary" type="checkbox">
                 Более 5 000
@@ -100,9 +104,9 @@
         </li>
 
         <li class="filters__item">
-          <div class="filters__dropdown filter-dropdown common-dropdown common-dropdown_transformer common-dropdown_breakpoint_1400">
-            <button class="common-dropdown__button">Цвет</button>
-            <div class="common-dropdown__content filter-dropdown__content">
+          <div class="filters__dropdown filter-dropdown common-dropdown common-dropdown_transformer common-dropdown_breakpoint_1400" data-breakpoint="1400">
+            <button class="common-dropdown__button common-dropdown__button_breakpoint_1400">Цвет</button>
+            <div class="common-dropdown__content common-dropdown__content_breakpoint_1400 filter-dropdown__content">
               <label class="filter-dropdown__label">
                 <input class="filter-dropdown__checkbox checkbox-primary" type="checkbox">
                 Коричневый
@@ -167,8 +171,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">5,0</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-1.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-1-small.webp" alt="Фотография черного дивана 'R-94'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-1.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-1-small.webp" alt="Фотография черного дивана 'R-94'">
         </picture>
         <h3 class="catalog-card__title">Диван кожаный “R&#8209;94”</h3>
         <p class="catalog-card__price">94&nbsp;990&nbsp;руб</p>
@@ -178,8 +182,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,9</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-2.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-2-small.webp" alt="Фотография коричневого дивана 'T-75'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-2.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-2-small.webp" alt="Фотография коричневого дивана 'T-75'">
         </picture>
         <h3 class="catalog-card__title">Диван апартековый “T&#8209;75”</h3>
         <p class="catalog-card__price">69&nbsp;990&nbsp;руб</p>
@@ -189,8 +193,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,8</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-3.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-3-small.webp" alt="Фотография синего дивана 'D-31'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-3.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-3-small.webp" alt="Фотография синего дивана 'D-31'">
         </picture>
         <h3 class="catalog-card__title">Диван тканевый “D&#8209;31”</h3>
         <p class="catalog-card__price">28&nbsp;490&nbsp;руб</p>
@@ -200,8 +204,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,8</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-4.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-4-small.webp" alt="Фотография оранжевого дивана 'Y-68'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-4.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-4-small.webp" alt="Фотография оранжевого дивана 'Y-68'">
         </picture>
         <h3 class="catalog-card__title">Диван велюровый “Y&#8209;68”</h3>
         <p class="catalog-card__price">22&nbsp;990&nbsp;руб</p>
@@ -211,8 +215,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,8</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-5.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-5-small.webp" alt="Фотография светло-желтого дивана 'W-95'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-5.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-5-small.webp" alt="Фотография светло-желтого дивана 'W-95'">
         </picture>
         <h3 class="catalog-card__title">Диван из шинила “W&#8209;95”</h3>
         <p class="catalog-card__price">22&nbsp;990&nbsp;руб</p>
@@ -222,8 +226,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,8</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-6.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-6-small.webp" alt="Фотография бежевого дивана 'G-41'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-6.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-6-small.webp" alt="Фотография бежевого дивана 'G-41'">
         </picture>
         <h3 class="catalog-card__title">Диван флоковый “G&#8209;41”</h3>
         <p class="catalog-card__price">17&nbsp;990&nbsp;руб</p>
@@ -233,8 +237,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,8</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-7.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-7-small.webp" alt="Фотография светло-серого дивана 'V-43'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-7.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-7-small.webp" alt="Фотография светло-серого дивана 'V-43'">
         </picture>
         <h3 class="catalog-card__title">Диван шиниловый “V&#8209;43”</h3>
         <p class="catalog-card__price">19&nbsp;990&nbsp;руб</p>
@@ -244,8 +248,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,7</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-8.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-8-small.webp" alt="Фотография бледно-коричневого дивана 'S-99'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-8.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-8-small.webp" alt="Фотография бледно-коричневого дивана 'S-99'">
         </picture>
         <h3 class="catalog-card__title">Диван велюровый “S&#8209;99”</h3>
         <p class="catalog-card__price">19&nbsp;990&nbsp;руб</p>
@@ -255,8 +259,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,7</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-9.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-9-small.webp" alt="Фотография светло-зеленого дивана 'F-85'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-9.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-9-small.webp" alt="Фотография светло-зеленого дивана 'F-85'">
         </picture>
         <h3 class="catalog-card__title">Диван из кожзама “F&#8209;85”</h3>
         <p class="catalog-card__price">26&nbsp;990&nbsp;руб</p>
@@ -266,8 +270,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,6</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-10.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-10-small.webp" alt="Фотография серого дивана 'H-64'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-10.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-10-small.webp" alt="Фотография серого дивана 'H-64'">
         </picture>
         <h3 class="catalog-card__title">Диван флоковый “H&#8209;64”</h3>
         <p class="catalog-card__price">25&nbsp;990&nbsp;руб</p>
@@ -277,8 +281,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,6</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-11.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-11-small.webp" alt="Фотография серо-голубого дивана 'H-58'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-11.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-11-small.webp" alt="Фотография серо-голубого дивана 'H-58'">
         </picture>
         <h3 class="catalog-card__title">Диван флоковый “H&#8209;58”</h3>
         <p class="catalog-card__price">23&nbsp;990&nbsp;руб</p>
@@ -288,8 +292,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,6</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-12.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-12-small.webp" alt="Фотография коричневого дивана 'R-43'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-12.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-12-small.webp" alt="Фотография коричневого дивана 'R-43'">
         </picture>
         <h3 class="catalog-card__title">Диван из кожзама “R&#8209;43”</h3>
         <p class="catalog-card__price">33&nbsp;990&nbsp;руб</p>
@@ -299,8 +303,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,6</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-13.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-13-small.webp" alt="Фотография серо-голубого дивана 'С-42'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-13.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-13-small.webp" alt="Фотография серо-голубого дивана 'С-42'">
         </picture>
         <h3 class="catalog-card__title">Диван из шинила “С&#8209;42”</h3>
         <p class="catalog-card__price">18&nbsp;990&nbsp;руб</p>
@@ -310,8 +314,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,6</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-14.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-14-small.webp" alt="Фотография оранжевого дивана 'U-58'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-14.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-14-small.webp" alt="Фотография оранжевого дивана 'U-58'">
         </picture>
         <h3 class="catalog-card__title">Диван велюровый “U&#8209;58”</h3>
         <p class="catalog-card__price">21&nbsp;990&nbsp;руб</p>
@@ -321,8 +325,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,5</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-15.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-15-small.webp" alt="Фотография светло-серого дивана 'F-41'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-15.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-15-small.webp" alt="Фотография светло-серого дивана 'F-41'">
         </picture>
         <h3 class="catalog-card__title">Диван флоковый “F&#8209;41”</h3>
         <p class="catalog-card__price">17&nbsp;990&nbsp;руб</p>
@@ -332,8 +336,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,5</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-16.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-16-small.webp" alt="Тёмно-серый диван 'R-85'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-16.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-16-small.webp" alt="Тёмно-серый диван 'R-85'">
         </picture>
         <h3 class="catalog-card__title">Диван велюровый “R&#8209;85”</h3>
         <p class="catalog-card__price">34&nbsp;990&nbsp;руб</p>
@@ -343,8 +347,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,5</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-17.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-17-small.webp" alt="Фотография серо-голубого дивана 'S-44'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-17.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-17-small.webp" alt="Фотография серо-голубого дивана 'S-44'">
         </picture>
         <h3 class="catalog-card__title">Диван велюровый “S&#8209;44”</h3>
         <p class="catalog-card__price">19&nbsp;990&nbsp;руб</p>
@@ -354,8 +358,8 @@
       <li class="catalog-list__item catalog-card">
         <div class="catalog-card__rating rating" aria-description="рейтинг">4,4</div>
         <picture class="catalog-card__picture">
-          <source data-srcset="./img/catalog/catalog-18.webp" media="(min-width: 400px)">
-            <img class="catalog-card__image lazy" data-src="./img/catalog/catalog-18-small.webp" alt="Фотография бежевого дивана 'С-80'">
+          <source srcset="#" data-srcset="./img/catalog/catalog-18.webp" media="(min-width: 400px)">
+            <img class="catalog-card__image lazy" src="#" data-src="./img/catalog/catalog-18-small.webp" alt="Фотография бежевого дивана 'С-80'">
         </picture>
         <h3 class="catalog-card__title">Диван из шинила “С&#8209;80”</h3>
         <p class="catalog-card__price">20&nbsp;990&nbsp;руб</p>

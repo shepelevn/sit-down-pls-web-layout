@@ -9,44 +9,12 @@
   color: #333333;
 }
 
-* {
-  box-sizing: inherit;
-  -webkit-tap-highlight-color: rgba(vars.$color-primary, 0.5);
-}
+// Delete later
+// img {
+//   max-width: 100%;
+// }
 
-*:focus-visible {
-  outline: 2px solid vars.$color-primary;
-  outline-offset: -1px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-svg {
-  width: 18px;
-  height: 18px;
-}
-
-a {
-  text-decoration: none;
-
-  &:focus-visible {
-    outline: none;
-  }
-}
-
-button {
-  cursor: pointer;
-}
-
-button:focus-visible {
-  outline: none;
-}
-
-button, a, svg, input, .common-transition {
+.common-transition {
   transition: none vars.$transition-duration vars.$transition-timing;
   -webkit-tap-highlight-color: transparent;
 
@@ -55,39 +23,8 @@ button, a, svg, input, .common-transition {
   }
 }
 
-picture {
-  font-size: 0;
-}
-
-img {
-  max-width: 100%;
-}
-
-h1, h2, h3, p {
-  margin: 0;
-}
-
-address {
-  font-style: normal;
-}
-
-textarea {
-  resize: none;
-}
-
-q {
-  quotes: none;
-}
-
-blockquote {
-  margin: 0;
-}
-
-select {
-  visibility: hidden;
-}
-
 .h2 {
+  margin: 0;
   margin-bottom: 26px;
   font-weight: 400;
   font-size: 24px;
@@ -101,7 +38,6 @@ select {
 
 .site-container_locked {
   height: 100vh;
-  // overflow: hidden;
 }
 
 .clear-button {
@@ -109,6 +45,7 @@ select {
   border: none;
   padding: 0;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(vars.$color-primary, 0.5);
 
   &:focus-visible {
     outline: 1px solid vars.$color-primary;
@@ -133,6 +70,8 @@ select {
 }
 
 .phone {
+  font-style: normal;
+
   &__link {
     color: vars.$color-secondary;
     font-size: 14px;
@@ -145,6 +84,7 @@ select {
 
     &:focus-visible {
       color: vars.$color-secondary;
+      outline: none;
 
       &:before {
         background-color: vars.$color-bone;
@@ -200,6 +140,7 @@ select {
   }
 
   &__icon {
+    @extend .common-transition;
     vertical-align: middle;
     transition-property: color;
   }
@@ -209,9 +150,8 @@ select {
   }
 
   &:focus-visible &__icon {
-    &__icon {
       color: white;
-    }
+      transition-property: none;
   }
 
   &:focus-visible &::before {
@@ -224,12 +164,15 @@ select {
 }
 
 .common-link {
+  @extend .common-transition;
   @extend .background-rectangle;
 
   position: relative;
   display: inline-block;
 
   &:focus-visible {
+    outline: none;
+
     &::before {
       opacity: 1;
     }
@@ -243,6 +186,8 @@ select {
 }
 
 .link-primary {
+  @extend .common-transition;
+
   color: vars.$color-black;
   font-size: 16px;
   line-height: 22px;
@@ -253,6 +198,8 @@ select {
   }
 
   &:focus-visible {
+    outline: none;
+
     &::before {
       background-color: vars.$color-pink-violet;
     }
@@ -273,10 +220,13 @@ select {
 
   &:focus-visible {
     color: vars.$color-primary-shade;
+    outline: none;
   }
 }
 
 .link-social {
+  @extend .common-transition;
+
   display: block;
   height: 36px;
   padding: 3px;
@@ -296,6 +246,7 @@ select {
   &:focus-visible {
     color: white;
     background-color: vars.$color-primary-light;
+    outline: none;
   }
 
   &:active {
@@ -320,6 +271,7 @@ select {
 
 .input-primary {
   @extend .clear-input;
+  @extend .common-transition;
 
   padding: 20px 18px;
   border-radius: 10px;
@@ -394,6 +346,7 @@ select {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(vars.$color-primary, 0.5);
 
   &:focus-visible {
     outline: none;
@@ -427,7 +380,7 @@ select {
     }
   }
 
-  &.is-focused &__single {
+  &.is-focused &__single, &__single-focused {
     border-color: vars.$color-primary;
     background-color: vars.$color-pink-light;
   }
@@ -470,7 +423,7 @@ select {
     z-index: 700;
   }
 
-  &__dropdown &__item {
+  &__dropdown &__item, &__dropdown-item {
     @extend .common-transition;
 
     transition-property: color;
@@ -558,6 +511,7 @@ select {
 
   &__title {
     display: none;
+    margin: 0;
   }
 
   @media (min-width: 576px) {
@@ -567,11 +521,11 @@ select {
   }
 
   @media (min-width: 1400px) {
-    &_breakpoint_1400 &__button {
+    &__button_breakpoint_1400 {
       display: none;
     }
 
-    &_breakpoint_1400 &__title {
+    &__title_breakpoint_1400 {
       display: block;
       margin-bottom: 8px;
       color: vars.$color-gray-shade;
@@ -580,8 +534,8 @@ select {
       line-height: 130%;
     }
 
-    &_breakpoint_1400 &__content {
-      &_static {
+    &__content {
+      &_breakpoint_1400_static {
         position: static;
         display: flex;
         padding: 0;
@@ -621,9 +575,9 @@ select {
   }
 
   &__icon {
-    width: 13px;
+    width: 18px;
     height: 8px;
-    margin-left: 5px;
+    padding-left: 5px;
   }
 
   &__icon-up {
@@ -720,7 +674,70 @@ select {
   }
 }
 
+.select-category {
+  @extend .select-primary;
+
+  width: 100%;
+
+  &__list {
+    @extend .select-primary__list;
+
+    width: 100%;
+  }
+
+  &__single {
+    @extend .select-primary__single;
+  }
+
+  &.is-focused &__single {
+    @extend .select-primary__single-focused;
+  }
+
+  &.is-open &__single {
+    @extend .select-primary__single-open;
+  }
+
+  &__dropdown {
+    @extend .select-primary__dropdown;
+  }
+
+  &__dropdown &__list {
+    @extend .select-primary__dropdown-list;
+  }
+
+  &__dropdown.is-active &__list {
+    z-index: 700;
+  }
+
+  &__dropdown &__item {
+    @extend .select-primary__dropdown-item;
+  }
+
+  &__dropdown &__item.select-category__placeholder {
+    display: none;
+  }
+
+  @media (min-width: 576px) {
+    width: 189px;
+
+    &__single {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+    width: 300px;
+
+    &__list {
+      width: 300px;
+    }
+  }
+}
+
 .button-primary {
+  @extend .common-transition;
+
   padding: 20px 49px;
   text-align: center;
   color: white;
@@ -739,6 +756,7 @@ select {
   &:focus-visible {
     background-color: vars.$color-primary-light;
     border-color: vars.$color-primary-shade;
+    outline: none;
   }
 
   &:active {
@@ -806,6 +824,8 @@ select {
   }
 
   &__icon {
+    @extend .common-transition;
+
     vertical-align: middle;
     transition-property: color, background-color, outline-color;
   }
@@ -900,6 +920,8 @@ select {
 }
 
 .underline-link {
+  @extend .common-transition;
+
   color: vars.$color-primary;
   text-decoration: underline solid vars.$color-primary;
   transition-property: color, text-decoration-color;
@@ -911,6 +933,7 @@ select {
 
   &:focus-visible {
     opacity: 0.5;
+    outline: none;
   }
 
   &:active {
@@ -1004,6 +1027,7 @@ select {
   border: 1px solid vars.$color-gray;
   border-radius: 2px;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(vars.$color-primary, 0.5);
 
   &:focus-visible {
     outline: 2px solid vars.$color-primary-shade;
@@ -1027,6 +1051,9 @@ select {
   display: flex;
   justify-content: center;
   gap: 16px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
 
   &__item {
     &_hidden {
@@ -1040,6 +1067,7 @@ select {
     height: 32px;
     width: 32px;
     padding: 6px 9px;
+    cursor: pointer;
 
     &_active {
       color: white;
@@ -1071,12 +1099,12 @@ select {
   border-radius: 3px;
   background-color: vars.$color-gray-middle;
 
-  & .noUi-connect {
+  .noUi-connect {
     height: 3px;
     background-color: vars.$color-primary;
   }
 
-  & .noUi-handle {
+  .noUi-handle {
     width: 13px;
     height: 13px;
     border: none;
@@ -1084,6 +1112,7 @@ select {
     color: vars.$color-primary;
     box-shadow: none;
     background-color: transparent;
+    cursor: pointer;
     transform: translateX(-11px);
 
     &::before {
@@ -1130,6 +1159,7 @@ select {
 
 .specs {
   &__title {
+    margin: 0;
     color: vars.$color-gray;
     font-weight: 400;
     font-size: 10px;
@@ -1137,6 +1167,7 @@ select {
   }
 
   &__value {
+    margin: 0;
     margin-bottom: 8px;
     font-size: 14px;
     line-height: 19px;
