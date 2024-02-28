@@ -1,0 +1,132 @@
+@use '../vars' as vars;
+
+.special {
+  &__container {
+    margin-bottom: 71px;
+  }
+}
+
+.special-card {
+  position: relative;
+  padding: 30px;
+  padding-bottom: 82px;
+  border-radius: 10px;
+  background-color: vars.$color-gray-light;
+  user-select: none;
+
+  &__badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92px;
+    height: 34px;
+    box-sizing: border-box;
+    padding-right: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    background-image: url('../img/special/badge.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(-30px);
+  }
+
+  &__image-container {
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: center;
+    height: 218px;
+    width: calc(100% + 60px);
+    margin-right: -30px;
+    transform: translateX(-30px);
+  }
+
+  &__image {
+    transform: translateY(6px);
+  }
+
+  &__scheme {
+    display: none;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  &__prices {
+    margin-bottom: 23px;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  &__new-price {
+    float: left;
+    margin: 0;
+    margin-right: 30px;
+    color: vars.$color-secondary;
+  }
+
+  &__old-price {
+    color: vars.$color-gray;
+    font-size: 16px;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .special {
+    &__container {
+      margin-bottom: 55px;
+    }
+
+    &__title {
+      max-width: calc(100% - 95px);
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .special-swiper {
+    &__slide {
+      width: 296px;
+    }
+
+    &__big-card-slide {
+      width: 624px;
+    }
+  }
+
+  .special-card {
+    position: relative;
+
+    &__image-container {
+      align-items: flex-end;
+    }
+
+    &__image {
+      vertical-align: bottom;
+      transform: none;
+    }
+
+    &__scheme {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      display: block;
+    }
+
+    &__title {
+      max-width: 225px;
+    }
+  }
+}

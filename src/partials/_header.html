@@ -1,0 +1,207 @@
+<header class="header">
+  <div class="header__container container">
+    <div class="header__region">
+      Ваш регион:
+      <select class="header__select-region select-region" id="select-region" name="region" data-label="регион">
+        <option class="select-region__option" value="moscow">Москва</option>
+        <option class="select-region__option">Казань</option>
+        <option class="select-region__option">Уфа</option>
+        <option class="select-region__option">Пермь</option>
+        <option class="select-region__option">Ростов&#8209;на&#8209;Дону</option>
+      </select>
+    </div>
+    <address class="header__phone phone">
+      <a class="phone__link common-link" href="javascript: void(0);">
+        <span class="common-link__content">
+          <svg class="phone__icon">
+            <use xlink:href="img/sprite.svg#phone"></use>
+          </svg>
+            +7 (495) 885-45-47
+        </span>
+      </a>
+    </address>
+    <nav class="header__secondary-menu header__burger-menu secondary-menu common-transition">
+      <ul class="secondary-menu__list">
+        <li class="secondary-menu__item">
+          <a class="secondary-menu__link link-light common-link" href="javascript: void(0);">
+            <span class="common-link__content">
+              О компании
+            </span>
+          </a>
+        </li>
+        <li class="secondary-menu__item">
+          <a class="secondary-menu__link link-light common-link" href="javascript: void(0);">
+            <span class="common-link__content">
+              Гарантия и возврат
+            </span>
+          </a>
+        </li>
+        <li class="secondary-menu__item">
+          <a class="secondary-menu__link link-light common-link" href="javascript: void(0);">
+            <span class="common-link__content">
+              Корпоративным клиентам
+            </span>
+          </a>
+        </li>
+        <li class="secondary-menu__item">
+          <a class="secondary-menu__link link-light common-link" href="javascript: void(0);">
+            <span class="common-link__content">
+              Дизайн-решение
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__burger burger">
+      <button class="burger__button transparent-button common-link" id="open-burger" aria-label="Открыть меню">
+        <span class="common-link__content">
+          <svg class="burger__icon transparent-button__icon">
+            <use xlink:href="img/sprite.svg#burger"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <a class="header__logo logo-link" href="index.html">
+      <img src="img/header/logo.webp" alt="Логотип SitDownPls">
+    </a>
+    <div class="header__menu header__burger-menu menu common-transition">
+      <button class="menu__close close transparent-button common-link" id="close-burger" aria-label="Закрыть меню">
+        <span class="common-link__content">
+          <svg class="close__icon transparent-button__icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </span>
+      </button>
+      <nav class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link link-primary common-link" href="catalog.html">
+              <span class="common-link__content">
+                Каталог
+              </span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link-primary common-link" href="javascript: void(0);">
+              <span class="common-link__content">
+                Магазины
+              </span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link-primary common-link" href="javascript: void(0);">
+              <span class="common-link__content">
+                Шоу-рум
+              </span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link-primary common-link" href="javascript: void(0);">
+              <span class="common-link__content">
+                Доставка и оплата
+              </span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link-primary common-link" href="javascript: void(0);">
+              <span class="common-link__content">
+                Дисконт
+              </span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link-primary common-link" href="javascript: void(0);">
+              <span class="common-link__content">
+                Контакты
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__service-buttons">
+      <button class="header__account transparent-button common-link" aria-label="Личный кабинет">
+        <span class="common-link__content">
+          <svg class="header__account-icon transparent-button__icon">
+            <use xlink:href="img/sprite.svg#user"></use>
+          </svg>
+        </span>
+      </button>
+      <button class="header__cart cart transparent-button common-link" aria-label="Корзина">
+        <span class="common-link__content">
+          <span class="cart__count">0</span>
+          <svg class="cart__icon transparent-button__icon">
+            <use xlink:href="img/sprite.svg#cart"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <form class="header__search search">
+      <div class="search__input-group">
+        <input class="search__input button-input" type="text" aria-label="Поиск товара" placeholder="Я хочу купить...">
+        <button class="search__button circle-button" type="submit" aria-label="Начать поиск">
+          <span class="circle-button__icon-wrapper">
+            <svg class="search__button-icon circle-button__icon">
+              <use xlink:href="img/sprite.svg#circle-right"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+
+      <select class="select-category" id="header-category" name="category" data-label="Категория" data-no-flip="true">
+        <option class="select-primary__option" value="">Категория</option>
+        <option value="select-primary__option">Диваны</option>
+        <option value="select-primary__option">Кресла</option>
+        <option value="select-primary__option">Пуфы</option>
+        <option value="select-primary__option">Кровати</option>
+        <option value="select-primary__option">Тумбы</option>
+        <option value="select-primary__option">Комоды</option>
+        <option value="select-primary__option">Стулья</option>
+        <option value="select-primary__option">Столы</option>
+        <option value="select-primary__option">Аксессуары</option>
+      </select>
+    </form>
+
+    <div class="catalog-breadcrumbs header__breadcrumbs breadcrumbs">
+      <a class="breadcrumbs__link link-light" href="javascript: void(0);">
+        Главная
+      </a> /
+      <a class="breadcrumbs__link link-light" href="javascript: void(0);">
+        Каталог
+      </a> /
+      <a class="breadcrumbs__link link-light" href="javascript: void(0);">
+        Диваны
+      </a> /
+      <a class="breadcrumbs__link breadcrumbs__link_active link-light" href="javascript: void(0);">
+        Прямые диваны
+      </a>
+    </div>
+
+    <div class="item-card-breadcrumbs header__breadcrumbs breadcrumbs">
+      <a class="breadcrumbs__link link-light" href="javascript: void(0);">
+        Главная
+      </a> /
+      <a class="breadcrumbs__link link-light" href="javascript: void(0);">
+        Каталог
+      </a> /
+      <a class="breadcrumbs__link link-light" href="javascript: void(0);">
+        Диваны
+      </a> /
+      <a class="breadcrumbs__link link-light" href="javascript: void(0);">
+        Прямые диваны
+      </a> /
+      <a class="breadcrumbs__link breadcrumbs__link_active link-light" href="javascript: void(0);">
+        D-31
+      </a>
+    </div>
+
+    <div class="partnership-breadcrumbs header__breadcrumbs breadcrumbs">
+      <a class="breadcrumbs__link link-light" href="javascript: void(0);">
+        Главная
+      </a> /
+      <a class="breadcrumbs__link breadcrumbs__link_active link-light" href="javascript: void(0);">
+        Сотрудничество
+      </a>
+    </div>
+  </div>
+</header>

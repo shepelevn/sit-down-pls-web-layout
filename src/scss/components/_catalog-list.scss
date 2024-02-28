@@ -1,0 +1,135 @@
+@use '../vars';
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  &__item {
+    display: flex;
+  }
+
+  &__item_hidden {
+    display: none;
+  }
+}
+
+.catalog-card {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: vars.$color-gray-light;
+
+  &__rating {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 64px;
+    margin-bottom: 6px;
+    font-size: 0;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  &__price {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 16px;
+    color: vars.$color-gray-shade;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  &__button {
+    align-self: flex-end;
+    padding: 10px 23px;
+  }
+}
+
+@media (min-width: 576px) {
+  .catalog-list {
+    grid-auto-rows: 1fr;
+    gap: 32px;
+    width: 100%;
+
+    &__item {
+      min-height: 420px;
+    }
+  }
+
+  .catalog-card {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    height: 420px;
+
+    &__rating {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      padding-left: 23px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 130%;
+      background-size: 16px;
+    }
+
+    &__picture {
+      width: calc(100% + 32px);
+      margin: 0 -16px;
+      margin-bottom: 17px;
+    }
+
+    &__title {
+      max-width: 236px;
+      margin-bottom: 21px;
+      font-size: 3.125vw;
+      // font-size: 24px;
+      line-height: 130%;
+    }
+
+    &__price {
+      margin-bottom: 24px;
+    }
+
+    &__button {
+      align-self: flex-start;
+      padding: 17px 33px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog-card {
+    &__title {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .catalog-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1400px) {
+  .catalog-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

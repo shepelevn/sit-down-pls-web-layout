@@ -1,0 +1,116 @@
+@use '../vars' as vars;
+
+.form-modal {
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  &__description {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &__input {
+    padding: 16px 18px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  &__submit {
+    padding: 17px 33px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  &__lisence-wrapper {
+    position: relative;
+  }
+
+  &__license {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+
+  &__checkbox {
+    margin-right: 3px;
+  }
+}
+
+.callback-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 124px 51px 60px 51px;
+  padding-top: calc(50px + 23.125vw);
+  background-image: url('../img/common/elephant.svg');
+  background-size: 22.813vw;
+  // background-size: 73px;
+  background-repeat: no-repeat;
+  background-position: center 60px;
+
+  &__text {
+    width: 194px;
+    margin: 0;
+    color: vars.$color-black;
+    font-weight: 400;
+    // font-size: 16px;
+    font-size: calc(8px + 2.500vw);
+    line-height: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .form-modal {
+    padding: 30px;
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__description {
+      max-width: 374px;
+      margin-bottom: 30px;
+    }
+
+    &__input {
+      margin-bottom: 30px;
+    }
+
+    &__submit {
+      margin-bottom: 12px;
+    }
+
+    &__license {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  .callback-modal {
+    padding: 267px 75px 122px;
+    background-size: 172px 117px;
+    background-position: center 118px;
+
+    &__text {
+      width: auto;
+      font-size: 32px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .callback-modal {
+    background-position: 202px 118px;
+  }
+}

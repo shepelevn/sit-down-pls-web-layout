@@ -1,0 +1,24 @@
+- Check cross-browser compatablity
+
+ Desktop
+  Chrome - v
+  Firefox - v
+  Edge - v
+  Opera - v
+  Safari - v
+
+ Mobile
+  Chrome - v
+  Firefox - v
+  Edge - v
+  Opera - v
+
+ - Layout
+ - Functionality
+ - Keyboard accessibility
+ - Animations
+
+- Check layout on firefox, chrome
+- Delete all later blocks
+
+> Stopped at checking firefox on breakpoint 768

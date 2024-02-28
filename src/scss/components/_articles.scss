@@ -1,0 +1,90 @@
+@use '../vars' as vars;
+
+.articles-card {
+  position: relative;
+  padding: 30px;
+  padding-top: 0;
+  border-radius: 10px;
+  background-color: vars.$color-gray-light;
+  outline-offset: -1px;
+  user-select: none;
+
+  &__image-block {
+    aspect-ratio: 296 / 202;
+    width: calc(100% + 60px);
+    margin: 0 -30px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+
+    &_1 {
+      background-image: url('../img/articles/articles-1.webp');
+    }
+
+    &_2 {
+      background-image: url('../img/articles/articles-2.webp');
+    }
+
+    &_3 {
+      background-image: url('../img/articles/articles-3.webp');
+    }
+
+    &_4 {
+      background-image: url('../img/articles/articles-4.webp');
+    }
+
+    &_5 {
+      background-image: url('../img/articles/articles-5.webp');
+    }
+  }
+
+  &__text {
+    margin-bottom: 84px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .articles {
+    &__container {
+      margin-bottom: 56px;
+    }
+  }
+
+  .articles-card {
+    &__text {
+      font-size: 24px;
+      line-height: 33px;
+      margin-bottom: 90px;
+    }
+
+    &__image-block {
+      &_1 {
+        background-image: url('../img/articles/articles-1-1920.webp');
+      }
+
+      &_2 {
+        background-image: url('../img/articles/articles-2-1920.webp');
+      }
+
+      &_3 {
+        background-image: url('../img/articles/articles-3-1920.webp');
+      }
+
+      &_4 {
+        background-image: url('../img/articles/articles-4-1920.webp');
+      }
+
+      &_5 {
+        background-image: url('../img/articles/articles-5-1920.webp');
+      }
+    }
+  }
+}

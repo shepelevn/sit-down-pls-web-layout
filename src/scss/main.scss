@@ -1,0 +1,13 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "vendor";
+
+// подключения компонентов страницы
+
+@import './components/_common.scss';
+@import './components/_header.scss';
+@import './components/_oxford.scss';
+@import './components/_footer.scss';

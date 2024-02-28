@@ -1,0 +1,219 @@
+@use '../vars' as vars;
+
+.partnership {
+  &__title {
+    margin-bottom: 32px;
+  }
+}
+
+.block {
+  margin-bottom: 32px;
+  color: vars.$color-gray-shade;
+  font-size: 14px;
+  line-height: 179%;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 11px;
+    color: vars.$color-black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__title-small {
+    margin-bottom: 12px;
+    color: vars.$color-black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.opportunities {
+  &__list {
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 32px;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 12px;
+    padding-left: 37px;
+    line-height: 150%;
+    background-repeat: no-repeat;
+
+    &_1 {
+      background-image: url('../img/partnership/network.webp');
+    }
+
+    &_2 {
+      background-image: url('../img/partnership/briefcase.webp');
+    }
+
+    &_3 {
+      background-image: url('../img/partnership/git-pull-request.webp');
+    }
+  }
+}
+
+.advantages {
+  &__title {
+    margin: 0;
+    margin-bottom: 11px;
+    color: vars.$color-secondary;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 12px;
+  }
+}
+
+.guarantees {
+  &__list {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: list-counter;
+    margin-bottom: 33px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 13px;
+    line-height: 178%;
+    counter-increment: list-counter;
+
+    &::before {
+      content: counter(list-counter) ". ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: vars.$color-secondary;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 180%;
+    }
+  }
+
+  &__banner {
+    min-height: 54px;
+    max-width: 400px;
+    padding-left: 52px;
+    margin-right: auto;
+    margin-left: auto;
+    color: vars.$color-black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    background-image: url('../img/partnership/pencil.webp');
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+}
+
+@media (min-width: 576px) {
+  .partnership-breadcrumbs {
+    display: block;
+  }
+
+  .partnership {
+    padding-top: 16px;
+
+    &__opportunities {
+      margin-bottom: 30px;
+    }
+  }
+
+  .block {
+    font-size: 16px;
+    line-height: 180%;
+
+    &__title {
+      margin-bottom: 13px;
+      font-size: 24px;
+      line-height: 33px;
+    }
+
+    &__title-small {
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+
+  .advantages {
+    &__title {
+      margin-bottom: 13px;
+    }
+
+    &__description {
+      max-width: 99%;
+      line-height: 182%;
+    }
+  }
+
+  .guarantees {
+    &__list {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      line-height: 181%;
+    }
+
+    &__banner {
+      display: flex;
+      align-items: center;
+      max-width: none;
+      min-height: 116px;
+      padding-left: 109px;
+      font-size: 24px;
+      line-height: 150%;
+      background-image: url('../img/partnership/pencil-big.webp');
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .partnership {
+    &__block {
+      max-width: 843px;
+    }
+  }
+
+  .opportunities {
+    &__item {
+      max-width: 614px;
+    }
+  }
+
+  .guarantees {
+    &__list {
+      max-width: 835px;
+    }
+
+    &__item {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .partnership {
+    padding-top: 24px;
+
+    &__container {
+      margin-bottom: 68px;
+    }
+  }
+}

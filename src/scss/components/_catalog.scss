@@ -1,0 +1,270 @@
+@use '../vars' as vars;
+
+.catalog {
+  padding-top: 3px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    order: -1;
+    margin-bottom: 18px;
+  }
+
+  &__filters {
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 32px;
+    list-style: none;
+  }
+
+  &__banner {
+    display: none;
+  }
+}
+
+.filters {
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  &__title {
+    &_big {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 406px;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.filter-dropdown {
+  &__label {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 130%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(vars.$color-primary, 0.5);
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+  }
+
+  &__prices {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__label-text {
+    margin-right: 6px;
+  }
+
+  &__input {
+    width: 82px;
+  }
+
+  &__slider {
+    display: none;
+  }
+
+  &__more {
+    display: inline;
+    padding: 0;
+    font-size: 16px;
+    line-height: 130%;
+
+    &_hidden {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .catalog-breadcrumbs {
+    display: block;
+  }
+
+  .catalog {
+    padding-top: 17px;
+
+    &__title {
+      margin-bottom: 26px;
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+
+  .filters {
+    &__list {
+      gap: 16px 32px;
+    }
+  }
+
+  .filter-dropdown {
+    &__content {
+      min-width: 187px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .catalog {
+    &__title {
+      margin-bottom: 15px;
+    }
+  }
+
+  .filters {
+    display: flex;
+    align-items: center;
+
+    &__title {
+      margin-bottom: 0;
+      margin-right: 43px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .catalog {
+    padding-top: 24px;
+
+    &__container {
+      display: block;
+      margin-bottom: 130px;
+    }
+
+    &__title {
+      margin-bottom: 25px;
+    }
+
+    &__filters {
+      float: left;
+      order: -1;
+      display: inline-block;
+      width: 296px;
+      margin-right: 32px;
+      margin-bottom: 78px;
+    }
+
+    &__banner {
+      order: -1;
+      display: block;
+      clear: left;
+      float: left;
+      display: inline-block;
+      max-width: 296px;
+      margin-right: 32px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 952px;
+    }
+
+    &__pagination {
+      width: 952px;
+      float: right;
+    }
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      margin-bottom: 22px;
+      font-size: 18px;
+      line-height: 130%;
+
+      &_small {
+        display: none;
+      }
+
+      &_big {
+        display: block;
+      }
+    }
+  }
+
+  .filter-dropdown {
+    &__content {
+      gap: 10px;
+    }
+
+    &__label {
+      height: 22px;
+
+      &_hidden {
+        display: block;
+      }
+    }
+
+    &__checkbox {
+      margin-right: 8px;
+    }
+
+    &__more {
+      display: none;
+    }
+
+    &__prices {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__price-label {
+      margin-bottom: 5px;
+    }
+
+    &__input {
+      width: 86px;
+      height: 30px;
+    }
+
+    &__slider {
+      display: block;
+      width: 100%;
+    }
+  }
+}
