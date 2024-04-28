@@ -9,18 +9,76 @@
   color: #333333;
 }
 
-// Delete later
-// img {
-//   max-width: 100%;
-// }
+*:focus-visible {
+  outline: 2px solid vars.$color-primary;
+  outline-offset: -1px;
+}
 
-.common-transition {
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+svg {
+  width: 18px;
+  height: 18px;
+}
+
+a {
+  text-decoration: none;
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: none;
+}
+
+button, a, svg, input, .common-transition {
   transition: none vars.$transition-duration vars.$transition-timing;
   -webkit-tap-highlight-color: transparent;
 
   &:focus-visible, &:active {
     transition-duration: 0ms;
   }
+}
+
+picture {
+  font-size: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+textarea {
+  resize: none;
+}
+
+q {
+  quotes: none;
+}
+
+blockquote {
+  margin: 0;
+}
+
+select {
+  visibility: hidden;
 }
 
 .h2 {
