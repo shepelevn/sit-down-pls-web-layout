@@ -7,6 +7,13 @@ Layout for the online furniture store "SitDownPls"
 * en [English](README.md)
 * ru [Русский](./readme/README.ru.md)
 
+## Technologies used in the project
+
+* `gulp.js`
+* `HTML`
+* `SASS`
+* `JavaScript`
+
 ## Installation
 
 1. Clone the repository by running
