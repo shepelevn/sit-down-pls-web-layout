@@ -9,7 +9,7 @@ Layout for the online furniture store "SitDownPls"
 
 ## Technologies used in the project
 
-* `gulp.js`
+* `Gulp`
 * `HTML`
 * `SASS`
 * `JavaScript`
@@ -24,7 +24,7 @@ Layout for the online furniture store "SitDownPls"
 ## Scripts
 
 * `npm run dev` - run development server on `localhost:8080`
-* `npm run build` - build the project inside the `app` folder
+* `npm run build` - build the project and output to the `app` folder
 * `npm run html` - check HTML code with validator
 
 ## Pages description
